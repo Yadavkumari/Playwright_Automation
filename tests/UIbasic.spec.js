@@ -39,7 +39,9 @@ test("get text of the page", async ({ page }) => {
 });
 
 test("drop down handling", async ({ page }) => {
-  const userName = page.locator('[id="username"]');
+  const userName = page.locator('#username');
+  //const userName = page.locator('[id="username"]');
+
   const signIn = page.locator('[id="signInBtn"]');
   const documentlink = page.locator("[href*=documents]");
 

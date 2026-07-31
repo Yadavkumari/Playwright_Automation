@@ -8,7 +8,7 @@ test("@Web Client App login", async ({ page }) => {
   const products = page.locator(".card-body");
 
   await page.goto("https://rahulshettyacademy.com/client");
-  await page.getByPlaceholder("email@example.com").fill(email);
+  await page.getByRole("textbox",{name:'email'}).fill(email);
   await page.getByPlaceholder("enter your passsword").fill("Iamking@000");
   await page.getByRole("button", { name: "Login" }).click();
 
